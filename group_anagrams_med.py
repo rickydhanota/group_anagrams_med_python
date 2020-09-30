@@ -6,3 +6,8 @@
 
 # Sample output:
 # output = [["yo", "oy"], ["flop", "olfp"], ["act", "tac", "cat"], ["foo"]]
+
+def groupAnagrams(word):
+    for i in word:
+        print(i)
+print(groupAnagrams(["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"]))
