@@ -7,7 +7,14 @@
 # Sample output:
 # output = [["yo", "oy"], ["flop", "olfp"], ["act", "tac", "cat"], ["foo"]]
 
-def groupAnagrams(word):
-    for i in word:
-        print(i)
+def groupAnagrams(words):
+    anagram = {}
+    for word in words:
+        sortedWord = "".join(sorted(word))
+        if sortedWord in anagram:
+            anagram[sortedWord].append(word)
+        else:
+            anagram[sortedWord] = [word]
+    return list(anagram.values())
+        
 print(groupAnagrams(["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"]))
